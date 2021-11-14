@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fooddelevery/constants.dart';
 import 'package:fooddelevery/screens/details/details-screen.dart';
-import 'package:fooddelevery/screens/submenu/menu-screen.dart';
+import 'package:fooddelevery/screens/submenu/submenu-screen.dart';
 
 class MenuItem extends StatelessWidget {
   final title;
@@ -54,24 +54,37 @@ class MenuItem extends StatelessWidget {
             child: Column(
               children: <Widget>[
                 Container(
-                  margin: EdgeInsets.only(right: 60),
                   padding: EdgeInsets.all(5),
                   child:Center(
-                    child:       Row(
+                    child:
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Image.asset(
-                          "assets/images/mcdonalds.png",
+                          "assets/images/bigmac.jpg",
                           width: size.width * 0.18,
                           height: size.height * 0.1,
                           // size.width * 0.18 means it use 18% of total width
-                        )
+                        ),
+                        Image.asset(
+                          "assets/images/cheeseburger.jpg",
+                          width: size.width * 0.18,
+                          height: size.height * 0.1,
+                          // size.width * 0.18 means it use 18% of total width
+                        ),
+                        Image.asset(
+                          "assets/images/mcdoubels.jpg",
+                          width: size.width * 0.18,
+                          height: size.height * 0.1,
+                          // size.width * 0.18 means it use 18% of total width
+                        ),
                       ],
                     ),
                   )
                 ),
                 Text(title,
                     style:
-                    TextStyle(color: kPrimaryColor, fontSize: 25))
+                    TextStyle(color: Colors.black, fontSize: 25))
               ],
             ),
           ),

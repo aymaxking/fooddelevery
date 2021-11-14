@@ -44,17 +44,18 @@ class PlaceItem extends StatelessWidget {
           ),
         ],
       ),
-      child: Material(
+      child:
+      Material(
         color: Colors.transparent,
         child: InkWell(
           onTap: press,
           child: Padding(
             padding: const EdgeInsets.all(10.0),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 Container(
-                  margin: EdgeInsets.only(right: 60),
-                  padding: EdgeInsets.all(5),
+                  padding: EdgeInsets.only(right: 40),
                   child: Image.asset(
                     svgSrc,
                     width: size.width * 0.18,
@@ -62,12 +63,12 @@ class PlaceItem extends StatelessWidget {
                     // size.width * 0.18 means it use 18% of total width
                   ),
                 ),
-                Center(
+                Container(
                   child: Column(
                     children: [
                       Text(title,
                           style:
-                              TextStyle(color: kPrimaryColor, fontSize: 25)),
+                          TextStyle(color: kPrimaryColor, fontSize: 25)),
                       Text(description,
                           style: TextStyle(
                               color: Colors.grey[800],
@@ -75,7 +76,7 @@ class PlaceItem extends StatelessWidget {
                               fontSize: 15)),
                     ],
                   ),
-                )
+                ),
               ],
             ),
           ),

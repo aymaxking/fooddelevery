@@ -51,33 +51,28 @@ class SubMenuItem extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(10.0),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 Container(
-                  margin: EdgeInsets.only(right: 20),
-                  padding: EdgeInsets.all(5),
                   child:
                   Image.asset(
-                    "assets/images/mcdonalds.png",
+                    img,
                     width: size.width * 0.18,
                     height: size.height * 0.1,
                     // size.width * 0.18 means it use 18% of total width
                   )
                 ),
                 Container(
-                    margin: EdgeInsets.only(right: 40),
-                    padding: EdgeInsets.all(5),
                     child:
                     Text(title,
                         style:
-                        TextStyle(color: kPrimaryColor, fontSize: 25)),
+                        TextStyle(color: Colors.black, fontSize: 20)),
                 ),
                 Container(
-                    margin: EdgeInsets.only(top: 40),
-                    padding: EdgeInsets.all(5),
                     child:
-                    Text(price.toString(),
+                    Text(price.toString()+" DH",
                         style:
-                        TextStyle(color: kPrimaryColor, fontSize: 20))
+                        TextStyle(color: Colors.black, fontSize: 20))
                 ),
               ],
             ),

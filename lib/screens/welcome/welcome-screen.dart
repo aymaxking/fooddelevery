@@ -5,14 +5,15 @@ import 'package:fooddelevery/screens/details/components/body.dart';
 import 'package:fooddelevery/screens/menu/components/body.dart';
 import 'package:fooddelevery/screens/places/components/body.dart';
 import 'package:fooddelevery/screens/submenu/components/body.dart';
+import 'package:fooddelevery/screens/welcome/components/body.dart';
 
-class SubMenuScreen extends StatelessWidget {
+class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: detailsAppBar(),
-      body: SubMenuBody(),
+      body: WelcomeBody(),
     );
   }
 }
