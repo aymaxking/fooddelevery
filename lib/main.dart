@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:fooddelevery/screens/home/home-screen.dart';
 import 'package:fooddelevery/screens/login/login.dart';
+import 'package:fooddelevery/screens/welcome/welcome-screen.dart';
 
 import 'constants.dart';
 import 'firebase/auth.dart';
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
           bodyText2: TextStyle(color: ksecondaryColor),
         ),
       ),
-      home: LoginScreen(),
+      home: WelcomeScreen(),
     );
   }
 }

@@ -13,7 +13,7 @@ AppBar homeAppBar(BuildContext context) {
       radius: 50.0,
       backgroundColor: Colors.transparent,
       //display the user profile image
-      backgroundImage: NetworkImage(FirebaseAuth.instance.currentUser.photoURL),
+      // backgroundImage: NetworkImage(FirebaseAuth.instance.currentUser.photoURL),
     ),
     title: RichText(
       text: TextSpan(
@@ -31,8 +31,7 @@ AppBar homeAppBar(BuildContext context) {
             style: TextStyle(color: kPrimaryColor),
           ),
           TextSpan(
-            text: FirebaseAuth.instance.currentUser.displayName
-            ,
+            // text: FirebaseAuth.instance.currentUser.displayName,
             style: TextStyle(color: kPrimaryColor),
           ),
         ],
