@@ -123,19 +123,19 @@ List<SubMenuItem> getSubMenu() {
     SubMenuItem(
       title: "BIG MAC",
       price: 13.15,
-      img: "assets/images/bigmac.jpg",
+      img: "assets/images/bigmac.png",
       press: () {},
     ),
     SubMenuItem(
       title: "BIG TASTY",
       price: 18.15,
-      img: "assets/images/cheeseburger.jpg",
+      img: "assets/images/bigtasty.png",
       press: () {},
     ),
     SubMenuItem(
       title: "BURGER",
       price: 20.00,
-      img: "assets/images/mcdoubels.jpg",
+      img: "assets/images/Cheeseburger.png",
       press: () {},
     ),
 

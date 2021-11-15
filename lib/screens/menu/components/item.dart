@@ -61,19 +61,19 @@ class MenuItem extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Image.asset(
-                          "assets/images/bigmac.jpg",
+                          "assets/images/bigmac.png",
                           width: size.width * 0.18,
                           height: size.height * 0.1,
                           // size.width * 0.18 means it use 18% of total width
                         ),
                         Image.asset(
-                          "assets/images/cheeseburger.jpg",
+                          "assets/images/bigtasty.png",
                           width: size.width * 0.18,
                           height: size.height * 0.1,
                           // size.width * 0.18 means it use 18% of total width
                         ),
                         Image.asset(
-                          "assets/images/mcdoubels.jpg",
+                          "assets/images/Cheeseburger.png",
                           width: size.width * 0.18,
                           height: size.height * 0.1,
                           // size.width * 0.18 means it use 18% of total width

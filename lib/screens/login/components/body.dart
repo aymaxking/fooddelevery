@@ -11,8 +11,10 @@ import 'package:fooddelevery/screens/home/home-screen.dart';
 import 'package:fooddelevery/screens/login/components/background.dart';
 
 class LoginBody extends StatelessWidget {
-  const LoginBody({
+  String number;
+   LoginBody({
     Key key,
+    this.number
   }) : super(key: key);
 
   @override
@@ -38,7 +40,9 @@ class LoginBody extends StatelessWidget {
             // ),
             RoundedInputPhoneField(
               hintText: "Phone Number",
-              onChanged: (value) {},
+              onChanged: (value) {
+                number=value;
+              },
             ),
             RoundedButton(
               text: "LOGIN",
@@ -47,7 +51,8 @@ class LoginBody extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return OTPScreen(_controller.text);
+                      // return OTPScreen(number);
+                      return HomeScreen();
                     },
                   ),
                 );
