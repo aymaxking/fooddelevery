@@ -3,18 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fooddelevery/constants.dart';
 import 'package:fooddelevery/firebase/auth.dart';
-import 'package:fooddelevery/screens/login/login.dart';
 
 AppBar homeAppBar(BuildContext context) {
   return AppBar(
     backgroundColor: Colors.white,
     elevation: 0,
-    leading: CircleAvatar(
-      radius: 50.0,
-      backgroundColor: Colors.transparent,
-      //display the user profile image
-      // backgroundImage: NetworkImage(FirebaseAuth.instance.currentUser.photoURL),
-    ),
+    // leading: CircleAvatar(
+    //   radius: 50.0,
+    //   backgroundColor: Colors.transparent,
+    //   //display the user profile image
+    //   // backgroundImage: NetworkImage(FirebaseAuth.instance.currentUser.photoURL),
+    // ),
     title: RichText(
       text: TextSpan(
         style: Theme.of(context)
@@ -24,11 +23,11 @@ AppBar homeAppBar(BuildContext context) {
         children: [
           TextSpan(
             text: "Eat",
-            style: TextStyle(color: ksecondaryColor),
+            style: TextStyle(color: ksecondaryColor,fontSize: 50),
           ),
           TextSpan(
             text: "In",
-            style: TextStyle(color: kPrimaryColor),
+            style: TextStyle(color: kButtonColor,fontSize: 50),
           ),
           TextSpan(
             // text: FirebaseAuth.instance.currentUser.displayName,
@@ -41,7 +40,6 @@ AppBar homeAppBar(BuildContext context) {
       IconButton(
         icon: SvgPicture.asset("assets/icons/logout.svg"),
         onPressed: () {
-          AuthService().signOut();
         },
       ),
     ],

@@ -4,10 +4,14 @@ import 'package:fooddelevery/components/text_field_container.dart';
 import '../constants.dart';
 
 
-class RoundedPasswordField extends StatelessWidget {
+class RoundedInputPhoneField extends StatelessWidget {
+  final String hintText;
+  final IconData icon;
   final ValueChanged<String> onChanged;
-  const RoundedPasswordField({
+  const RoundedInputPhoneField({
     Key key,
+    this.hintText,
+    this.icon = Icons.phone,
     this.onChanged,
   }) : super(key: key);
 
@@ -15,20 +19,14 @@ class RoundedPasswordField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFieldContainer(
       child: TextField(
-        obscureText: true,
         onChanged: onChanged,
-        cursorColor: Colors.black,
+        cursorColor: Colors.white,
         decoration: InputDecoration(
-          fillColor: Colors.black,
-          hintText: "Password",
           icon: Icon(
-            Icons.lock,
+            icon,
             color: Colors.black,
           ),
-          suffixIcon: Icon(
-            Icons.visibility,
-            color: Colors.black,
-          ),
+          hintText: hintText,
           border: InputBorder.none,
         ),
       ),

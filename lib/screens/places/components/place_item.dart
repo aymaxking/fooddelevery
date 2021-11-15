@@ -68,7 +68,7 @@ class PlaceItem extends StatelessWidget {
                     children: [
                       Text(title,
                           style:
-                          TextStyle(color: kPrimaryColor, fontSize: 25)),
+                          TextStyle(color: Colors.black, fontSize: 25)),
                       Text(description,
                           style: TextStyle(
                               color: Colors.grey[800],

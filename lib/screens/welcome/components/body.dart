@@ -6,8 +6,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:fooddelevery/components/rounded_button.dart';
 import 'package:fooddelevery/components/search_box.dart';
 import 'package:fooddelevery/constants.dart';
+import 'package:fooddelevery/screens/Login/login_screen.dart';
 import 'package:fooddelevery/screens/Signup/signup_screen.dart';
-import 'package:fooddelevery/screens/login/login.dart';
 import 'package:fooddelevery/screens/menu/components/list.dart';
 import 'package:fooddelevery/screens/places/components/place_list.dart';
 
@@ -23,13 +23,24 @@ class WelcomeBody extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              "WELCOME TO EDU",
-              style: TextStyle(fontWeight: FontWeight.bold),
-            ),
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.center,
+            //   children: [
+            //     Text(
+            //       "Eat",
+            //       style: TextStyle(color: ksecondaryColor,
+            //       fontSize: 50),
+            //     ),
+            //     Text(
+            //       "In",
+            //       style: TextStyle(color: kPrimaryColor,fontSize: 50
+            //       ),
+            //     ),
+            //   ],
+            // ),
             SizedBox(height: size.height * 0.05),
-            SvgPicture.asset(
-              "assets/icons/chat.svg",
+            Image.asset(
+              "assets/images/logo.png",
               height: size.height * 0.45,
             ),
             SizedBox(height: size.height * 0.05),
@@ -48,7 +59,7 @@ class WelcomeBody extends StatelessWidget {
             ),
             RoundedButton(
               text: "SIGN UP",
-              color: kPrimaryColor,
+              color: kButtonColor,
               textColor: Colors.black,
               press: () {
                 Navigator.push(

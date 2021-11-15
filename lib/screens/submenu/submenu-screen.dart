@@ -13,7 +13,7 @@ class SubMenuScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: detailsAppBar(),
-      body: WelcomeBody(),
+      body: SubMenuBody(),
     );
   }
 }
