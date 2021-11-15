@@ -1,9 +1,51 @@
-
+import 'package:firebase_database/firebase_database.dart';
+import 'package:flutter/foundation.dart';
+import 'package:flutter/foundation.dart';
 import 'package:fooddelevery/screens/home/components/category_item.dart';
+import 'package:fooddelevery/screens/home/components/fastfood_item.dart';
 import 'package:fooddelevery/screens/home/components/type_item.dart';
 import 'package:fooddelevery/screens/menu/components/item.dart';
 import 'package:fooddelevery/screens/places/components/place_item.dart';
 import 'package:fooddelevery/screens/submenu/components/item2.dart';
+
+
+class Category {
+  String title;
+  bool isActive;
+
+  Category(this.title, this.isActive);
+}
+
+class Type {
+  String title;
+  String svgSrc;
+  Category category;
+
+  Type(this.title, this.svgSrc, this.category);
+}
+
+class Place {
+  String title;
+  String svgSrc;
+  String description;
+  Type type;
+
+  Place(this.title, this.svgSrc, this.description, this.type);
+}
+
+class Menu{
+  String title;
+  Place place;
+  Menu(this.title,this.place);
+}
+
+class SubMenu{
+  String title;
+  double price;
+  String img;
+  SubMenu(this.title,this.price,this.img);
+}
+
 
 List<CategoryItem> getCategory() {
   return <CategoryItem>[
@@ -30,6 +72,7 @@ List<CategoryItem> getCategory() {
     )
   ];
 }
+
 List<TypeItem> getTypes(CategoryItem category) {
   return <TypeItem>[
     TypeItem(
@@ -70,34 +113,36 @@ List<TypeItem> getTypes(CategoryItem category) {
     )
   ];
 }
+
 List<PlaceItem> getPlaces(TypeItem type) {
   return <PlaceItem>[
     PlaceItem(
       svgSrc: "assets/images/mcdonalds.png",
       title: "McDonalds",
-  description:"Burgers - Fast Food",
-  press: () {},
+      description: "Burgers - Fast Food",
+      press: () {},
     ),
     PlaceItem(
       svgSrc: "assets/images/kfc.png",
       title: "KFC",
-      description:"Fried Chiken - Fast Food",
+      description: "Fried Chiken - Fast Food",
       press: () {},
     ),
     PlaceItem(
       svgSrc: "assets/images/primos.png",
       title: "PRIMOS",
-      description:"Sandwiches - Fast Food",
+      description: "Sandwiches - Fast Food",
       press: () {},
     ),
     PlaceItem(
       svgSrc: "assets/images/burgerking.png",
       title: "Burger King",
-      description:"Burgers - Fast Food",
+      description: "Burgers - Fast Food",
       press: () {},
     ),
   ];
 }
+
 List<MenuItem> getMenu() {
   return <MenuItem>[
     MenuItem(
@@ -118,6 +163,7 @@ List<MenuItem> getMenu() {
     ),
   ];
 }
+
 List<SubMenuItem> getSubMenu() {
   return <SubMenuItem>[
     SubMenuItem(
@@ -138,9 +184,30 @@ List<SubMenuItem> getSubMenu() {
       img: "assets/images/Cheeseburger.png",
       press: () {},
     ),
-
   ];
 }
 
-
-
+List<FastFoodItem> getFastFood() {
+  return <FastFoodItem>[
+    FastFoodItem(
+      svgSrc: "assets/images/mcdonalds.png",
+      title: "McDonalds",
+      press: () {},
+    ),
+    FastFoodItem(
+      svgSrc: "assets/images/kfc.png",
+      title: "KFC",
+      press: () {},
+    ),
+    FastFoodItem(
+      svgSrc: "assets/images/primos.png",
+      title: "PRIMOS",
+      press: () {},
+    ),
+    FastFoodItem(
+      svgSrc: "assets/images/burgerking.png",
+      title: "Burger King",
+      press: () {},
+    ),
+  ];
+}

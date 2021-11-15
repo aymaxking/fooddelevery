@@ -12,9 +12,6 @@ class SubMenuBody extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          SearchBox(
-            onChanged: (value) {},
-          ),
           SubMenuList(),
         ],
       ),

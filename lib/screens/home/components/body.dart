@@ -4,6 +4,8 @@ import 'package:fooddelevery/screens/home/components/category_list.dart';
 import 'package:fooddelevery/screens/home/components/discount_card.dart';
 import 'package:fooddelevery/screens/home/components/type_list.dart';
 
+import 'fastfood_list.dart';
+
 class HomeBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -16,6 +18,7 @@ class HomeBody extends StatelessWidget {
           ),
           CategoryList(),
           TypeList(),
+          FastFoodList(),
           DiscountCard(),
         ],
       ),
