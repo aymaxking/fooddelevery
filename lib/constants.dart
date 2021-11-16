@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fooddelevery/screens/home/components/category_item.dart';
 
 const kPrimaryColor = Colors.white;
 const kButtonColor = Color(0xFFdc3a4b);

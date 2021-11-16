@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:fooddelevery/screens/details/details-screen.dart';
 import 'package:fooddelevery/data.dart';
+import 'package:fooddelevery/screens/home/components/category_item.dart';
 
 import 'type_item.dart';
 
 class TypeList extends StatelessWidget {
-  const TypeList({
+  CategoryItem category ;
+   TypeList({
+    this.category,
     Key key,
   }) : super(key: key);
 
@@ -14,7 +17,7 @@ class TypeList extends StatelessWidget {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(
-        children: getTypes(getCategory()[1]),
+        children: getTypes(this.category),
       ),
     );
   }

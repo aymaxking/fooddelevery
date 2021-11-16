@@ -3,9 +3,9 @@ import 'package:fooddelevery/constants.dart';
 
 class CategoryItem extends StatelessWidget {
   final String title;
-  final bool isActive;
-  final Function press;
-  const CategoryItem({
+   bool isActive;
+   Function press;
+   CategoryItem({
     Key key,
     this.title,
     this.isActive = false,
@@ -14,8 +14,11 @@ class CategoryItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    this.press=(){
+
+    };
     return GestureDetector(
-      onTap: press,
+      onTap: press(),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
         child: Column(

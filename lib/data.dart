@@ -11,6 +11,7 @@ import 'package:fooddelevery/screens/submenu/components/item2.dart';
 
 class Category {
   String title;
+  
   Category(this.title);
 
   Category createCategory(record) {
@@ -55,7 +56,9 @@ class SubMenu{
   SubMenu(this.title,this.price,this.img);
 }
 
-
+CategoryItem changeCategory(CategoryItem category){
+  return category;
+}
 List<CategoryItem> getCategory() {
   return <CategoryItem>[
     CategoryItem(
@@ -98,29 +101,23 @@ List<TypeItem> getTypes(CategoryItem category) {
     ),
     TypeItem(
       svgSrc: "assets/icons/chinese_noodles.svg",
-      title: "Chinese & Noodles",
-      category: getCategory()[1],
+      title: "Dessert",
+      category: getCategory()[2],
       press: () {},
     ),
     TypeItem(
       svgSrc: "assets/icons/chinese_noodles.svg",
-      title: "Chinese & Noodles",
-      category: getCategory()[1],
-      press: () {},
-    ),
-    TypeItem(
-      svgSrc: "assets/icons/chinese_noodles.svg",
-      title: "Chinese & Noodles",
-      category: getCategory()[1],
+      title: "Drinks",
+      category: getCategory()[3],
       press: () {},
     ),
     TypeItem(
       svgSrc: "assets/icons/burger_beer.svg",
       title: "Burger & Beer",
-      category: getCategory()[2],
+      category: getCategory()[4],
       press: () {},
     )
-  ];
+  ].where((element) => element.category.title==category.title).toList();
 }
 
 List<PlaceItem> getPlaces(TypeItem type) {

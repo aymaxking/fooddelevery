@@ -7,7 +7,7 @@ import 'package:fooddelevery/screens/places/places-screen.dart';
 class TypeItem extends StatelessWidget {
   final String title, svgSrc;
   Function press;
-  final CategoryItem category;
+   CategoryItem category;
    TypeItem({
     Key key,
     this.title,
