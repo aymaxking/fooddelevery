@@ -15,8 +15,15 @@ class FastFoodList extends StatelessWidget {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child:Column(
+
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          Padding(padding: const EdgeInsets.symmetric(horizontal: 20),
+          child:          Text(
+            "Popular",
+            style: TextStyle(fontWeight: FontWeight.bold, color: kTextColor),
+          ), ),
+
           Row(
             children: getFastFood(),
           ),

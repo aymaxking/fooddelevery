@@ -11,9 +11,18 @@ import 'package:fooddelevery/screens/submenu/components/item2.dart';
 
 class Category {
   String title;
-  bool isActive;
+  Category(this.title);
 
-  Category(this.title, this.isActive);
+  Category createCategory(record) {
+    Map<String, dynamic> attributes = {
+      'title': '',
+      'isActive': false,
+    };
+    record.forEach((key, value) => {attributes[key] = value});
+    Category category = new Category(attributes['title']);
+    return category;
+  }
+
 }
 
 class Type {
@@ -210,4 +219,10 @@ List<FastFoodItem> getFastFood() {
       press: () {},
     ),
   ];
+
 }
+
+
+
+
+
