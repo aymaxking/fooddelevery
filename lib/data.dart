@@ -97,36 +97,6 @@ List<CategoryItem> getCategory(List<Category> list) {
   ];
 }
 
-List<TypeItem> getTypes() {
-  return <TypeItem>[
-    TypeItem(
-      svgSrc: "assets/icons/burger_beer.svg",
-      title: "Burger",
-      press: () {},
-    ),
-    TypeItem(
-      svgSrc: "assets/icons/chinese_noodles.svg",
-      title: "Chinese & Noodles",
-      press: () {},
-    ),
-    TypeItem(
-      svgSrc: "assets/icons/chinese_noodles.svg",
-      title: "Dessert",
-      press: () {},
-    ),
-    TypeItem(
-      svgSrc: "assets/icons/chinese_noodles.svg",
-      title: "Drinks",
-      press: () {},
-    ),
-    TypeItem(
-      svgSrc: "assets/icons/burger_beer.svg",
-      title: "Burger & Beer",
-      press: () {},
-    )
-  ];
-      // .where((element) => element.category.title==category.title).toList();
-}
 
 List<PlaceItem> getPlaces(TypeItem type) {
   return <PlaceItem>[
@@ -178,28 +148,7 @@ List<MenuItem> getMenu() {
   ];
 }
 
-List<SubMenuItem> getSubMenu() {
-  return <SubMenuItem>[
-    SubMenuItem(
-      title: "BIG MAC",
-      price: 13.15,
-      img: "assets/images/bigmac.png",
-      press: () {},
-    ),
-    SubMenuItem(
-      title: "BIG TASTY",
-      price: 18.15,
-      img: "assets/images/bigtasty.png",
-      press: () {},
-    ),
-    SubMenuItem(
-      title: "BURGER",
-      price: 20.00,
-      img: "assets/images/Cheeseburger.png",
-      press: () {},
-    ),
-  ];
-}
+
 
 List<FastFoodItem> getFastFood() {
   return <FastFoodItem>[

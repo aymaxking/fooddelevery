@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fooddelevery/constants.dart';
@@ -6,13 +7,14 @@ import 'package:fooddelevery/screens/details/details-screen.dart';
 class SubMenuItem extends StatelessWidget {
   final title;
   String img;
-  double price;
+  String price;
   Function press;
+
   SubMenuItem({
     Key key,
     this.title,
     this.price,
-    this.img,
+    this.img = "assets/images/bigmac.png",
     this.press,
   }) : super(key: key);
 
@@ -54,26 +56,19 @@ class SubMenuItem extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 Container(
-                  child:
-                  Image.asset(
-                    img,
-                    width: size.width * 0.18,
-                    height: size.height * 0.1,
-                    // size.width * 0.18 means it use 18% of total width
-                  )
-                ),
+                    child: Image.asset(
+                  img,
+                  width: size.width * 0.35,
+                  height: size.height * 0.15,
+                  // size.width * 0.18 means it use 18% of total width
+                )),
                 Container(
-                    child:
-                    Text(title,
-                        style:
-                        TextStyle(color: Colors.black, fontSize: 20)),
-                ),
+                  width:size.width* 0.3,
+                  child: AutoSizeText(title,
+                       style: TextStyle(color: Colors.black, fontSize: 20)),),
                 Container(
-                    child:
-                    Text(price.toString()+" DH",
-                        style:
-                        TextStyle(color: Colors.black, fontSize: 20))
-                ),
+                    child: AutoSizeText(price.toString() + " DH",
+                        style: TextStyle(color: Colors.black, fontSize: 20))),
               ],
             ),
           ),

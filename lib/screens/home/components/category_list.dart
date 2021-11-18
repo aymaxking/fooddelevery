@@ -13,15 +13,12 @@ class CategoryList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<List<CategoryItem>>(
-      future: httpService.getStocks(),
+      future: httpService.getCategories(),
       builder: (BuildContext ctx, AsyncSnapshot<List<CategoryItem>> snapshot) {
         if (!snapshot.hasData) {
           return Container(
             child: Center(
-              // child: CircularProgressIndicator(),
-              child: Text(
-                snapshot.toString(),
-              ),
+              child: CircularProgressIndicator(),
             ),
           );
         }

@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fooddelevery/constants.dart';
@@ -11,7 +12,7 @@ class PlaceItem extends StatelessWidget {
   PlaceItem({
     Key key,
     this.title,
-    this.svgSrc,
+    this.svgSrc="assets/images/mcdonalds.png",
     this.press,
     this.description,
   }) : super(key: key);
@@ -64,12 +65,13 @@ class PlaceItem extends StatelessWidget {
                   ),
                 ),
                 Container(
+                  width:size.width* 0.5,
                   child: Column(
                     children: [
-                      Text(title,
+                      AutoSizeText(title,
                           style:
                           TextStyle(color: Colors.black, fontSize: 25)),
-                      Text(description,
+                      AutoSizeText(description,
                           style: TextStyle(
                               color: Colors.grey[800],
                               fontWeight: FontWeight.bold,

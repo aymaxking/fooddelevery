@@ -1,3 +1,5 @@
+import 'dart:typed_data';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fooddelevery/constants.dart';
@@ -5,12 +7,13 @@ import 'package:fooddelevery/screens/home/components/category_item.dart';
 import 'package:fooddelevery/screens/places/places-screen.dart';
 
 class TypeItem extends StatelessWidget {
-  final String title, svgSrc;
+  final String title;
+  var  svgSrc;
   Function press;
    TypeItem({
     Key key,
     this.title,
-    this.svgSrc,
+    this.svgSrc="assets/icons/burger_beer.svg",
     this.press,
   }) : super(key: key);
 
@@ -57,7 +60,8 @@ class TypeItem extends StatelessWidget {
                     color: kPrimaryColor.withOpacity(0.13),
                     shape: BoxShape.circle,
                   ),
-                  child: SvgPicture.asset(
+                  child:
+                  SvgPicture.asset(
                     svgSrc,
                     width: size.width * 0.18,
                     // size.width * 0.18 means it use 18% of total width
