@@ -9,7 +9,7 @@ class PlaceList extends StatelessWidget {
       scrollDirection: Axis.vertical,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: getPlaces(getTypes(getCategory()[1])[1]),
+        children: getPlaces(getTypes()[1]),
       ),
     );
   }

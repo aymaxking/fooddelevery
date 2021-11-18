@@ -2,7 +2,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fooddelevery/constants.dart';
-import 'package:fooddelevery/firebase/auth.dart';
 
 AppBar homeAppBar(BuildContext context) {
   return AppBar(

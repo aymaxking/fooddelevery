@@ -5,7 +5,6 @@ import 'package:fooddelevery/components/rounded_button.dart';
 import 'package:fooddelevery/components/rounded_input_field.dart';
 import 'package:fooddelevery/components/rounded_input_phone_field.dart';
 import 'package:fooddelevery/components/rounded_password_field.dart';
-import 'package:fooddelevery/firebase/otp.dart';
 import 'package:fooddelevery/screens/Signup/signup_screen.dart';
 import 'package:fooddelevery/screens/home/home-screen.dart';
 import 'package:fooddelevery/screens/login/components/background.dart';

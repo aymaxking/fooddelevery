@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:fooddelevery/constants.dart';
 
 class CategoryItem extends StatelessWidget {
-  final String title;
+   String title;
    bool isActive;
    Function press;
    CategoryItem({
-    Key key,
-    this.title,
+    this.title="",
     this.isActive = false,
     this.press,
-  }) : super(key: key);
+  });
+
 
   @override
   Widget build(BuildContext context) {

@@ -6,9 +6,9 @@ import 'package:fooddelevery/screens/home/components/category_item.dart';
 import 'type_item.dart';
 
 class TypeList extends StatelessWidget {
-  CategoryItem category ;
+  // CategoryItem category ;
    TypeList({
-    this.category,
+    // this.category,
     Key key,
   }) : super(key: key);
 
@@ -17,7 +17,7 @@ class TypeList extends StatelessWidget {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(
-        children: getTypes(this.category),
+        children: getTypes(),
       ),
     );
   }

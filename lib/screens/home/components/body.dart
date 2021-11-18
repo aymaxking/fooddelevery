@@ -10,7 +10,6 @@ import '../../../constants.dart';
 import 'fastfood_list.dart';
 
 class HomeBody extends StatelessWidget {
-  CategoryItem currentCategroy =getCategory()[1];
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -21,7 +20,7 @@ class HomeBody extends StatelessWidget {
             onChanged: (value) {},
           ),
           CategoryList(),
-          TypeList(category: currentCategroy,),
+          TypeList(),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Text(
