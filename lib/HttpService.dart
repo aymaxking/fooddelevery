@@ -7,6 +7,7 @@ import 'package:fooddelevery/screens/places/components/place_item.dart';
 import 'package:fooddelevery/screens/submenu/components/item2.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
+import 'globals.dart' as globals;
 
 class HttpService {
   final String baseURL = "http://10.0.2.2:8080";
@@ -22,6 +23,7 @@ class HttpService {
             title: obj['_embedded']['categories'][i]['title'].toString());
         items.add(item);
       }
+      globals.currentCategory=items.first;
       return items;
     } else {
       print("fdadad");
@@ -29,7 +31,7 @@ class HttpService {
     }
   }
 
-  Future<List<TypeItem>> getTypes() async {
+  Future<List<TypeItem>> getTypes(CategoryItem category) async {
     Response res = await get(Uri.parse(baseURL + "/types"));
     if (res.statusCode == 200) {
       final obj = jsonDecode(res.body);
