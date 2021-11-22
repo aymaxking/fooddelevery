@@ -35,7 +35,8 @@ class _MyHomePageState extends State<MyApp> {
           bodyText2: TextStyle(color: ksecondaryColor),
         ),
       ),
-      home: WelcomeScreen(),
+      // home: WelcomeScreen(),
+      home:WelcomeScreen(),
     );
   }
 

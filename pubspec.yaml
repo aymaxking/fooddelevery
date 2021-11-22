@@ -33,6 +33,7 @@ dependencies:
   flutter_svg: ^0.22.0
   smooth_star_rating: ^1.0.4
   auto_size_text: ^3.0.0
+  function_tree: ^0.8.12
   http:
   intl:
 
