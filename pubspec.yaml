@@ -34,6 +34,8 @@ dependencies:
   smooth_star_rating: ^1.0.4
   auto_size_text: ^3.0.0
   function_tree: ^0.8.12
+  expressions: ^0.2.3
+  math_expressions: ^2.2.0
   http:
   intl:
 
