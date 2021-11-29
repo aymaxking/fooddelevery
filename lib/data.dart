@@ -14,12 +14,12 @@ import 'package:http/http.dart' as http;
 
 class Category {
   String title;
-  
-  Category(this.title);
-
+  List<Type> types;
+  Category(this.title,this.types);
   factory Category.fromJson(Map<String, dynamic> json) {
     return Category(
       json['title'],
+      json['types'],
     );
   }
 

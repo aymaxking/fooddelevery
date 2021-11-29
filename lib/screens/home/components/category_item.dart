@@ -1,21 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:fooddelevery/constants.dart';
+import 'package:fooddelevery/globals.dart' as globals;
+import 'package:fooddelevery/screens/home/components/type_item.dart';
+
+import '../../../data.dart';
+
 
 class CategoryItem extends StatelessWidget {
    String title;
    bool isActive;
    Function press;
+   List<TypeItem> types;
    CategoryItem({
     this.title="",
     this.isActive = false,
     this.press,
+     this.types
   });
 
 
   @override
   Widget build(BuildContext context) {
     this.press=(){
-
     };
     return GestureDetector(
       onTap: press(),

@@ -7,6 +7,7 @@ import 'package:fooddelevery/screens/places/components/place_item.dart';
 import 'package:fooddelevery/screens/submenu/components/item2.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
+import 'data.dart';
 import 'globals.dart' as globals;
 
 class HttpService {
@@ -21,9 +22,9 @@ class HttpService {
       for (int i = 0; i < obj['_embedded']['categories'].length; i++) {
         CategoryItem item = new CategoryItem(
             title: obj['_embedded']['categories'][i]['title'].toString());
-        items.add(item);
+            types: obj['_embedded']['categories'][i]['types'];
+    items.add(item);
       }
-      globals.currentCategory=items.first;
       return items;
     } else {
       print("fdadad");
@@ -31,15 +32,15 @@ class HttpService {
     }
   }
 
-  Future<List<TypeItem>> getTypes(CategoryItem category) async {
+  Future<List<TypeItem>> getTypes(CategoryItem categoryItem) async {
     Response res = await get(Uri.parse(baseURL + "/types"));
     if (res.statusCode == 200) {
       final obj = jsonDecode(res.body);
       List<TypeItem> items = new List<TypeItem>();
 
-      for (int i = 0; i < obj['_embedded']['types'].length; i++) {
+      for (int i = 0; i < categoryItem.types.length; i++) {
         TypeItem item = new TypeItem(
-            title: obj['_embedded']['types'][i]['title'].toString(),
+            title: categoryItem.types[i].title,
         );
         items.add(item);
       }
