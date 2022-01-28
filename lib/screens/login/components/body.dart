@@ -21,7 +21,8 @@ class LoginBody extends StatelessWidget {
     TextEditingController _controller = TextEditingController();
     Size size = MediaQuery.of(context).size;
     return LoginBackground(
-      child: SingleChildScrollView(
+      child:
+      SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[

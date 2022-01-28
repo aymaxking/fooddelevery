@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:fooddelevery/screens/home/home-screen.dart';
+import 'package:fooddelevery/screens/login/login_screen.dart';
 import 'package:fooddelevery/screens/welcome/welcome-screen.dart';
 import 'package:fooddelevery/tp4.dart';
 
@@ -35,8 +36,7 @@ class _MyHomePageState extends State<MyApp> {
           bodyText2: TextStyle(color: ksecondaryColor),
         ),
       ),
-      home:WelcomeScreen(),
-    );
+      home:LoginScreen(),);
   }
 
 
